@@ -1,0 +1,11 @@
+{
+    "login":{
+        "title": "Authorization",
+        "username": "username",
+        "password": "password",
+        "required": "required",
+        "unknownUsername": "Unknown username",
+        "loginFailed": "Login Failed",
+        "btn": "Sign in"
+    }
+  }
