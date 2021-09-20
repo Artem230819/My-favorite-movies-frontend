@@ -4,7 +4,7 @@ import LockIcon from "@mui/icons-material/Lock";
 import { ErrorAuth } from "./StyleLoginForm.d";
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
-import { IUserCredentials } from "./interfesas/UserCredentials";
+import { IUserCredentials } from "./interfaces/UserCredentials";
 
 export const LoginForm = () => {
   const history = useHistory();
