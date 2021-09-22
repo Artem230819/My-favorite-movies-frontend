@@ -1,14 +1,15 @@
 import React, { ReactElement } from "react";
-import { Login } from "./components/Login/Login";
+import { Login } from "./components/Login";
 import "./i18n/i18n";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import { HomePage } from "./components/HomePage/HomePage";
+import { HomePage } from "./components/Logout";
+import { PrivateRoute } from "./components/PrivateRoute";
 
 export default function App(): ReactElement {
   return (
     <BrowserRouter>
       <Switch>
-        <Route exact path="/" component={HomePage} />
+        <PrivateRoute exact path="/" component={HomePage} />
         <Route path="/login" component={Login} />
       </Switch>
     </BrowserRouter>
