@@ -8,8 +8,8 @@ import { FORM_ERROR } from "final-form";
 import IUserCredentials from "../interfaces/UserCredentials";
 
 export const LoginForm = () => {
-  const history = useHistory();
   const { t } = useTranslation();
+
   const formValidate = (values: any) => {
     let errors = {};
     if (!values.username) {
@@ -20,6 +20,8 @@ export const LoginForm = () => {
     }
     return errors;
   };
+
+  const history = useHistory();
   const handleSubmitAuth = (values: IUserCredentials) => {
     if (!AuthUser({ username: values.username, password: values.password })) {
       return { [FORM_ERROR]: t("login.loginFailed") };
