@@ -10,7 +10,7 @@ import IUserCredentials from "../interfaces/UserCredentials";
 export const LoginForm = () => {
   const { t } = useTranslation();
 
-  const formValidate = (values: any) => {
+  const formValidate = (values: IUserCredentials) => {
     let errors = {};
     if (!values.username) {
       errors = { ...errors, username: t("login.required") };
