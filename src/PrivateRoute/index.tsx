@@ -5,6 +5,5 @@ interface IPrivateRoute extends RouteProps {}
 
 export const PrivateRoute: React.FC<IPrivateRoute> = ({ ...props }) => {
   const Auth = localStorage.getItem("Auth");
-  if (Auth === "0") return <Redirect to="/login" />;
-  return <Route {...props} />;
+  return Auth === "0" ? <Redirect to="/login" /> : <Route {...props} />;
 };

@@ -1,11 +1,11 @@
 import { Form, Field } from "react-final-form";
 import LockIcon from "@mui/icons-material/Lock";
-import { ErrorAuth, FormWrapper } from "./StyleLoginForm.d";
+import { ErrorAuth, FormWrapper } from "./css";
 import { useTranslation } from "react-i18next";
 import { AuthUser } from "../../../../services/AuthUser";
 import { useHistory } from "react-router-dom";
 import { FORM_ERROR } from "final-form";
-import IUserCredentials from "../interfaces/UserCredentials";
+import IUserCredentials from "../../../../types/UserCredentials";
 
 export const LoginForm = () => {
   const { t } = useTranslation();

@@ -1,7 +1,7 @@
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import { LoginForm } from "./components/LoginForm/LoginForm";
+import { LoginForm } from "./components/LoginForm";
 import { useTranslation } from "react-i18next";
-import { SelectLocales, WrapperAuth } from "./StyleLogin.d";
+import { SelectLocales, WrapperAuth } from "./css";
 import React from "react";
 
 export const Login = () => {

@@ -1,11 +1,8 @@
-import IUserCredentials from "../components/Login/components/interfaces/UserCredentials";
+import IUserCredentials from "../types/UserCredentials";
 
 export const AuthUser = ({ username, password }: IUserCredentials): boolean => {
-  if (
-    username !== localStorage.getItem("username") ||
-    password !== localStorage.getItem("password")
-  ) {
-    return false;
-  }
-  return true;
+  return (
+    username === localStorage.getItem("username") &&
+    password === localStorage.getItem("password")
+  );
 };
