@@ -26,7 +26,7 @@ export const Genres: FC = () => {
       localStorage.setItem("genres", JSON.stringify(result));
       setGenres(result);
     });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [t]);
 
   useEffect(() => {
