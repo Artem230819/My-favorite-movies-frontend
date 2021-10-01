@@ -13,9 +13,7 @@ export const FeaturedMoviesList: FC<Props> = ({ switchViewMovies }) => {
     const moviesData: IFeaturedMovies[] = JSON.parse(
       localStorage.getItem("movies") || "[]"
     );
-    if (moviesData.length > 0) {
-      setMovies(moviesData);
-    }
+    setMovies(moviesData);
   }, []);
 
   useEffect(() => {
