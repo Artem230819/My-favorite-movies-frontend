@@ -1,22 +1,16 @@
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import { LoginForm } from "./components/LoginForm";
 import { useTranslation } from "react-i18next";
-import { SelectLocales, WrapperAuth } from "./css";
+import { WrapperAuth } from "./css";
 import React from "react";
+import { LocalizationSelect } from "common/LocalizationSelect";
 
 export const Login = () => {
-  const { t, i18n } = useTranslation();
-  const onChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    i18n.changeLanguage(event.target.value);
-  };
-
+  const { t } = useTranslation();
   return (
     <WrapperAuth>
       <div>
-        <SelectLocales name="language" onChange={onChange}>
-          <option value="en">English</option>
-          <option value="ru">Russian</option>
-        </SelectLocales>
+        <LocalizationSelect />
         <div>
           <div>
             <div>

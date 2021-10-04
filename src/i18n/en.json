@@ -6,5 +6,15 @@
         "required": "required",
         "loginFailed": "Login Failed",
         "btn": "Sign in"
+    },
+    "homePage": {
+        "title": "My favorite cinema",
+        "inquiry": "en-US",
+        "greetings": "hello",
+        "logOut": "Log out",
+        "add": "Add",
+        "list": "list",
+        "block": "block",
+        "addViewed": "Add to viewed"
     }
   }

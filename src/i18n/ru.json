@@ -1,9 +1,20 @@
-{"login":{
-  "title": "Авторизоваться",
-  "username": "логин",
-  "password": "пароль",
-  "required": "заполните поле!",
-  "loginFailed": "Ошибка входа",
-  "btn": "Войти"
-}
+{
+  "login":{
+    "title": "Авторизоваться",
+    "username": "логин",
+    "password": "пароль",
+    "required": "заполните поле!",
+    "loginFailed": "Ошибка входа",
+    "btn": "Войти"
+  },
+  "homePage": {
+    "title": "Мое любимое кино",
+    "inquiry": "ru",
+    "greetings": "Привет",
+    "logOut": "Выйти",
+    "add": "Добавить",
+    "list": "Лист",
+    "block": "Блок",
+    "addViewed": "Добавить в проссмотренные"
+  }
 }
