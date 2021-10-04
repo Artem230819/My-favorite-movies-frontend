@@ -14,6 +14,7 @@
         "logOut": "Log out",
         "add": "Add",
         "list": "list",
-        "block": "block"
+        "block": "block",
+        "addViewed": "Add to viewed"
     }
   }

@@ -1,14 +1,16 @@
 import React, { FC, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
-import { LogOut } from "../../services/LogOutUser";
-import { LocalizationSelect } from "../../common/LocalizationSelect";
+import { LogOut } from "services/LogOutUser";
+import { LocalizationSelect } from "common/LocalizationSelect";
+import ControlPointIcon from "@mui/icons-material/ControlPoint";
 import {
   HomeUserBox,
   HomeWrapper,
   SwitchBlock,
   SwitchBtnWrapper,
   SwitchList,
+  ToolBox,
 } from "./css";
 import { Genres } from "./components/Genres";
 import { FeaturedMoviesList } from "./components/FeaturedMoviesList";
@@ -47,22 +49,25 @@ export const HomePage: FC<Props> = () => {
         </button>
       </HomeUserBox>
       <Genres />
-      <button onClick={redirectToSearchMovies}>{t("homePage.add")}</button>
-
-      <SwitchBtnWrapper>
-        <SwitchList
-          theme={{ switchViewMovies }}
-          onClick={() => viewDrawHandleMovie(true)}
-        >
-          {t("homePage.list")}
-        </SwitchList>
-        <SwitchBlock
-          theme={{ switchViewMovies }}
-          onClick={() => viewDrawHandleMovie(false)}
-        >
-          {t("homePage.block")}
-        </SwitchBlock>
-      </SwitchBtnWrapper>
+      <ToolBox>
+        <button onClick={redirectToSearchMovies}>
+          {t("homePage.add")} <ControlPointIcon />
+        </button>
+        <SwitchBtnWrapper>
+          <SwitchList
+            theme={{ switchViewMovies }}
+            onClick={() => viewDrawHandleMovie(true)}
+          >
+            {t("homePage.list")}
+          </SwitchList>
+          <SwitchBlock
+            theme={{ switchViewMovies }}
+            onClick={() => viewDrawHandleMovie(false)}
+          >
+            {t("homePage.block")}
+          </SwitchBlock>
+        </SwitchBtnWrapper>
+      </ToolBox>
       <FeaturedMoviesList switchViewMovies={switchViewMovies} />
     </HomeWrapper>
   );

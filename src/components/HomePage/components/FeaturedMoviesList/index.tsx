@@ -1,7 +1,9 @@
 import React, { FC, useEffect, useState } from "react";
-import { MovieList, MoviesWrapper } from "./css";
+import { MovieCard, MoviesWrapper } from "./css";
 import DeleteIcon from "@mui/icons-material/Delete";
 import IFeaturedMovies from "./Interface/IFeaturedMovies";
+import { useTranslation } from "react-i18next";
+import { POSTER_PATH } from "constants/posterPath";
 
 interface Props {
   switchViewMovies: boolean;
@@ -9,6 +11,8 @@ interface Props {
 
 export const FeaturedMoviesList: FC<Props> = ({ switchViewMovies }) => {
   const [movies, setMovies] = useState<IFeaturedMovies[]>([]);
+  const { t } = useTranslation();
+
   useEffect(() => {
     const moviesData: IFeaturedMovies[] = JSON.parse(
       localStorage.getItem("movies") || "[]"
@@ -40,32 +44,26 @@ export const FeaturedMoviesList: FC<Props> = ({ switchViewMovies }) => {
   return (
     <MoviesWrapper theme={{ switchViewMovies }}>
       {movies.map((movie: IFeaturedMovies) => (
-        <li key={movie.id}>
-          <MovieList theme={{ ...movie, switchViewMovies }}>
-            <img
-              src={
-                "https://www.themoviedb.org/t/p/w440_and_h660_face" +
-                movie.poster_path
-              }
-              alt={movie.title}
-            />
+        <MovieCard theme={{ ...movie, switchViewMovies }} key={movie.id}>
+          <label>
+            <i onClick={(event) => removeFavoritesMovie(event, movie.id)}>
+              <DeleteIcon />
+            </i>
+            <img src={POSTER_PATH + movie.poster_path} alt={movie.title} />
             <span>{movie.title}</span>
             {switchViewMovies ? <p>{movie.overview}</p> : ""}
             <div>
               <div>
-                <span>Добавить в просмотренные</span>
+                <span>{t("homePage.addViewed")}</span>
                 <input
                   type="checkbox"
                   checked={movie.completed}
                   onChange={() => toggleHandleMovieCompleted(movie.id)}
                 />
               </div>
-              <i onClick={(event) => removeFavoritesMovie(event, movie.id)}>
-                <DeleteIcon />
-              </i>
             </div>
-          </MovieList>
-        </li>
+          </label>
+        </MovieCard>
       ))}
     </MoviesWrapper>
   );

@@ -1,6 +1,6 @@
 import React, { FC, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { getGenresDate } from "../../../../services/gettingDataFromApiMovies";
+import { getGenresDate } from "services/gettingDataFromApiMovies";
 import { GenreList, GenreWrapper } from "./css";
 import IGenres from "./Interface/IGenres";
 

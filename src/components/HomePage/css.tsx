@@ -16,6 +16,18 @@ const HomeUserBox = styled.div`
   align-items: flex-end;
 `;
 
+const ToolBox = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  & > button {
+    border: 2px solid green;
+    :hover {
+      background-color: red;
+    }
+  }
+`;
+
 const SwitchBtnWrapper = styled.div`
   display: flex;
   justify-content: flex-end;
@@ -35,4 +47,4 @@ const SwitchBlock = styled.span`
   background-color: ${({ theme }) => (theme.switchViewMovies ? "" : "blue")};
 `;
 
-export { HomeWrapper, SwitchBtnWrapper, SwitchList, SwitchBlock, HomeUserBox };
+export { HomeWrapper, ToolBox, SwitchBtnWrapper, SwitchList, SwitchBlock, HomeUserBox };

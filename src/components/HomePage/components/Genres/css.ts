@@ -9,9 +9,9 @@ const GenreWrapper = styled.ul`
 const GenreList = styled.li`
   padding: 10px;
   border: ${({ theme }) => (theme.choice ? "2px solid black" : "none")};
-  width: 20%;
+  width: 15%;
   text-align: center;
-  margin: 10px;
+  margin: 5px;
   cursor: pointer;
 `;
 
