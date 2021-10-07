@@ -1,8 +1,10 @@
 import React, { FC, useEffect, useState } from "react";
-import { MovieCard, MoviesWrapper } from "./css";
+
 import DeleteIcon from "@mui/icons-material/Delete";
-import IFeaturedMovies from "./Interface/IFeaturedMovies";
+
 import { useTranslation } from "react-i18next";
+import IMoviesData from "types/IMoviesData";
+import { MovieCard, MoviesWrapper } from "common/components/MoviesList/css";
 import { POSTER_PATH } from "constants/posterPath";
 
 interface Props {
@@ -10,11 +12,11 @@ interface Props {
 }
 
 export const FeaturedMoviesList: FC<Props> = ({ switchViewMovies }) => {
-  const [movies, setMovies] = useState<IFeaturedMovies[]>([]);
+  const [movies, setMovies] = useState<IMoviesData[]>([]);
   const { t } = useTranslation();
 
   useEffect(() => {
-    const moviesData: IFeaturedMovies[] = JSON.parse(
+    const moviesData: IMoviesData[] = JSON.parse(
       localStorage.getItem("movies") || "[]"
     );
     setMovies(moviesData);
@@ -43,7 +45,7 @@ export const FeaturedMoviesList: FC<Props> = ({ switchViewMovies }) => {
   };
   return (
     <MoviesWrapper theme={{ switchViewMovies }}>
-      {movies.map((movie: IFeaturedMovies) => (
+      {movies.map((movie: IMoviesData) => (
         <MovieCard theme={{ ...movie, switchViewMovies }} key={movie.id}>
           <label>
             <i onClick={(event) => removeFavoritesMovie(event, movie.id)}>

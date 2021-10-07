@@ -19,7 +19,7 @@ const MovieCard = styled.li`
   width: 100%;
   border: solid 3px green;
   background-color: ${({ theme }) =>
-    theme.completed ? "rgba(0,0,0,.2)" : "none"};
+    theme.completed || theme.disable ? "rgba(0,0,0,.2)" : "none"};
   & > label {
     display: flex;
     justify-content: space-between;

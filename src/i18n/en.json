@@ -12,9 +12,17 @@
         "inquiry": "en-US",
         "greetings": "hello",
         "logOut": "Log out",
-        "add": "Add",
+        "addMovie": "Add",
         "list": "list",
         "block": "block",
-        "addViewed": "Add to viewed"
-    }
+        "add": "Add to viewed"
+    },
+    "searchMovies": {
+        "title": "Choose your film",
+        "popularity": "Popularity",
+        "release":"Release",
+        "list": "Letter",
+        "block": "Block",
+        "add": "Add to favorites"
+      }
   }

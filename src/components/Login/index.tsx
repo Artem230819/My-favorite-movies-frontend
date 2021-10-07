@@ -3,7 +3,7 @@ import { LoginForm } from "./components/LoginForm";
 import { useTranslation } from "react-i18next";
 import { WrapperAuth } from "./css";
 import React from "react";
-import { LocalizationSelect } from "common/LocalizationSelect";
+import { LocalizationSelect } from "common/components/LocalizationSelect";
 
 export const Login = () => {
   const { t } = useTranslation();
