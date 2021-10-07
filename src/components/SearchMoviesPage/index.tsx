@@ -9,7 +9,6 @@ import { getMovieDate } from "services/gettingDataFromApiMovies";
 import IMoviesData from "types/IMoviesData";
 import { YearValue } from "./components/YearValue";
 
-interface Props {}
 interface IFilter {
   genres: string;
   voteAverage: string;
@@ -20,7 +19,7 @@ const FAVORITE_MOVIE_DATA: IMoviesData[] = JSON.parse(
   localStorage.getItem("movies") || "[]"
 );
 
-export const SearchMoviesPage: FC<Props> = () => {
+export const SearchMoviesPage: FC = () => {
   const [filter, setFilter] = useState<IFilter>({
     genres: "",
     voteAverage: "10",

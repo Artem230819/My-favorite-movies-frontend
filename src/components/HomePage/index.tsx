@@ -11,9 +11,7 @@ import { MoviesList } from "common/components/MoviesList";
 import IMoviesData from "types/IMoviesData";
 import { SwitchViewMovies } from "common/components/SwitchViewMovies";
 
-interface Props {}
-
-export const HomePage: FC<Props> = () => {
+export const HomePage: FC = () => {
   const history = useHistory();
   const user = localStorage.getItem("username");
 
