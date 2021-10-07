@@ -6,15 +6,15 @@ interface Props {
 }
 
 export const YearValue: FC<Props> = ({ ...props }) => {
-  const items = [];
+  const year = [];
   for (let i = new Date().getFullYear(); i > 1960; i--) {
-    items.push(i);
+    year.push(i);
   }
   return (
     <select {...props}>
-      {items.map((items, kay) => (
-        <option key={kay} value={items}>
-          {items}
+      {year.map((year, kay) => (
+        <option key={kay} value={year}>
+          {year}
         </option>
       ))}
     </select>
