@@ -19,7 +19,7 @@ export const Login = () => {
                 sx={{ fontSize: 50 }}
               ></AccountCircleIcon>
             </div>
-            <h2>{t("login.title")}</h2>
+            <h2>{t("page.login.title")}</h2>
           </div>
           <LoginForm />
         </div>

@@ -60,23 +60,23 @@ export const HomePage: FC<Props> = () => {
   return (
     <HomeWrapper>
       <LocalizationSelect />
-      <h1>{t("homePage.title")}</h1>
+      <h1>{t("page.homePage.title")}</h1>
       <HomeUserBox>
         <span>
-          {t("homePage.greetings")}: <b>{user}</b>
+          {t("page.homePage.greetings")}: <b>{user}</b>
         </span>
         <button
           onClick={(): void => {
             LogOut(history);
           }}
         >
-          {t("homePage.logOut")}
+          {t("page.homePage.logOut")}
         </button>
       </HomeUserBox>
       <Genres />
       <ToolBox>
         <button onClick={redirectToSearchMovies}>
-          {t("homePage.addMovie")} <ControlPointIcon />
+          {t("page.homePage.addMovie")} <ControlPointIcon />
         </button>
         <SwitchViewMovies
           switchViewMovies={switchViewMovies}

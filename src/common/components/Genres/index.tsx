@@ -20,7 +20,7 @@ export const Genres: FC<Props> = ({ getMoviesGenre }) => {
   }, []);
 
   useEffect(() => {
-    getGenresDate(t("homePage.inquiry")).then((res) => {
+    getGenresDate(t("common.inquiry")).then((res) => {
       let result: IGenres[] = res;
       const storageData = JSON.parse(
         localStorage.getItem("genres") || "[]"

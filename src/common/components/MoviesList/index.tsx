@@ -42,7 +42,7 @@ export const MoviesList: FC<Props> = ({
             {switchViewMovies ? <p>{movie.overview}</p> : ""}
             <div>
               <div>
-                <span>{t(PageName + ".add")}</span>
+                <span>{t("page."+PageName + ".add")}</span>
                 <input
                   type="checkbox"
                   checked={movie.completed || movie.disable || false}

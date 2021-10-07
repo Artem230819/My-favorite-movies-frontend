@@ -1,27 +1,31 @@
 {
-  "login":{
-    "title": "Авторизоваться",
-    "username": "логин",
-    "password": "пароль",
-    "required": "заполните поле!",
-    "loginFailed": "Ошибка входа",
-    "btn": "Войти"
+  "page":{
+    "login":{
+      "title": "Авторизоваться",
+      "username": "логин",
+      "password": "пароль",
+      "required": "заполните поле!",
+      "loginFailed": "Ошибка входа",
+      "btn": "Войти"
+    },
+    "homePage": {
+      "title": "Мое любимое кино",
+      "addMovie": "Добавить фильм в избранное",
+      "list": "Лист",
+      "block": "Блок",
+      "add": "Добавить в проссмотренные"
+    },
+    "searchMovies": {
+      "title": "Выбери свой фильм",
+      "popularity": "Популярность",
+      "release":"Релиз",
+      "inquiry": "ru",
+      "list": "Лист",
+      "block": "Блок",
+      "add": "Добавить в избранное"
+    }
   },
-  "homePage": {
-    "title": "Мое любимое кино",
-    "inquiry": "ru",
-    "addMovie": "Добавить фильм в избранное",
-    "list": "Лист",
-    "block": "Блок",
-    "add": "Добавить в проссмотренные"
-  },
-  "searchMovies": {
-    "title": "Выбери свой фильм",
-    "popularity": "Популярность",
-    "release":"Релиз",
-    "inquiry": "ru",
-    "list": "Лист",
-    "block": "Блок",
-    "add": "Добавить в избранное"
+  "common":{
+    "inquiry": "ru"
   }
 }

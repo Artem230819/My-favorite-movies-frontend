@@ -19,13 +19,13 @@ export const SwitchViewMovies: FC<Props> = ({
         theme={{ switchViewMovies }}
         onClick={() => viewDrawHandleMovie(true)}
       >
-        {t("homePage.list")}
+        {t("page.homePage.list")}
       </SwitchRow>
       <SwitchColumn
         theme={{ switchViewMovies }}
         onClick={() => viewDrawHandleMovie(false)}
       >
-        {t("homePage.block")}
+        {t("page.homePage.block")}
       </SwitchColumn>
     </SwitchBtnWrapper>
   );

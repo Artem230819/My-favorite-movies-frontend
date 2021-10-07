@@ -55,7 +55,7 @@ export const SearchMoviesPage: FC<Props> = () => {
 
   useEffect((): void => {
     getMovieDate({
-      language: t("homePage.inquiry"),
+      language: t("common.inquiry"),
       year: filter.year,
       vote_average: filter.voteAverage,
       genres: filter.genres,
@@ -100,9 +100,9 @@ export const SearchMoviesPage: FC<Props> = () => {
   return (
     <div>
       <LocalizationSelect />
-      <h1>{t("searchMovies.title")}</h1>
+      <h1>{t("page.searchMovies.title")}</h1>
       <Genres getMoviesGenre={getMoviesGenre} />
-      <div>{t("searchMovies.popularity")}</div>
+      <div>{t("page.searchMovies.popularity")}</div>
       <input
         type="range"
         min="1"
@@ -110,7 +110,7 @@ export const SearchMoviesPage: FC<Props> = () => {
         value={filter.voteAverage}
         onChange={handleVoteAverage}
       />
-      <div>{t("searchMovies.release")} </div>
+      <div>{t("page.searchMovies.release")} </div>
       <YearValue onChange={handleYearValue} value={filter.year} />
       <SwitchViewMovies
         switchViewMovies={switchViewMovies}
