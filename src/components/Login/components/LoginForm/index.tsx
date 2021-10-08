@@ -13,10 +13,10 @@ export const LoginForm = () => {
   const formValidate = (values: IUserCredentials) => {
     let errors = {};
     if (!values.username) {
-      errors = { ...errors, username: t("login.required") };
+      errors = { ...errors, username: t("page.login.required") };
     }
     if (!values.password) {
-      errors = { ...errors, password: t("login.required") };
+      errors = { ...errors, password: t("page.login.required") };
     }
     return errors;
   };
@@ -24,7 +24,7 @@ export const LoginForm = () => {
   const history = useHistory();
   const handleSubmitAuth = (values: IUserCredentials) => {
     if (!AuthUser({ username: values.username, password: values.password })) {
-      return { [FORM_ERROR]: t("login.loginFailed") };
+      return { [FORM_ERROR]: t("page.login.loginFailed") };
     }
     localStorage.setItem("Auth", "1");
     history.push("/");
@@ -39,11 +39,11 @@ export const LoginForm = () => {
             <Field name="username">
               {({ input, meta }) => (
                 <div>
-                  <label>{t("login.username")}</label>
+                  <label>{t("page.login.username")}</label>
                   <input
                     {...input}
                     type="text"
-                    placeholder={t("login.username")}
+                    placeholder={t("page.login.username")}
                   />
                   {meta.error && meta.touched && (
                     <ErrorAuth>{meta.error}</ErrorAuth>
@@ -54,11 +54,11 @@ export const LoginForm = () => {
             <Field name="password">
               {({ input, meta }) => (
                 <div>
-                  <label>{t("login.password")}</label>
+                  <label>{t("page.login.password")}</label>
                   <input
                     {...input}
                     type="password"
-                    placeholder={t("login.password")}
+                    placeholder={t("page.login.password")}
                   />
                   {meta.error && meta.touched && (
                     <ErrorAuth>{meta.error}</ErrorAuth>
@@ -72,7 +72,7 @@ export const LoginForm = () => {
                 <span>
                   <LockIcon color="primary" sx={{ fontSize: 20 }} />
                 </span>
-                {t("login.btn")}
+                {t("page.login.btn")}
               </button>
             </div>
           </form>

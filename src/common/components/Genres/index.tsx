@@ -4,7 +4,11 @@ import { getGenresDate } from "services/gettingDataFromApiMovies";
 import { GenreList, GenreWrapper } from "./css";
 import IGenres from "./Interface/IGenres";
 
-export const Genres: FC = () => {
+interface Props {
+  getMoviesGenre?: ((genreData: IGenres[]) => void) | null;
+}
+
+export const Genres: FC<Props> = ({ getMoviesGenre }) => {
   const [genres, setGenres] = useState<IGenres[]>([]);
   const { t } = useTranslation();
 
@@ -16,9 +20,12 @@ export const Genres: FC = () => {
   }, []);
 
   useEffect(() => {
-    getGenresDate(t("homePage.inquiry")).then((res) => {
+    getGenresDate(t("common.inquiry")).then((res) => {
       let result: IGenres[] = res;
-      genres.forEach((value: IGenres, key: number) => {
+      const storageData = JSON.parse(
+        localStorage.getItem("genres") || "[]"
+      ) as IGenres[];
+      storageData.forEach((value: IGenres, key: number) => {
         if (value.choice) {
           result[key].choice = value.choice;
         }
@@ -26,11 +33,16 @@ export const Genres: FC = () => {
       localStorage.setItem("genres", JSON.stringify(result));
       setGenres(result);
     });
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [t]);
 
   useEffect(() => {
-    localStorage.setItem("genres", JSON.stringify(genres));
+    if (genres.length > 0) {
+      localStorage.setItem("genres", JSON.stringify(genres));
+      getMoviesGenre && getMoviesGenre(genres);
+    }
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [genres]);
 
   const handleGenreFetch = (id: number) => {

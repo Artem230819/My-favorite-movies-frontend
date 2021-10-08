@@ -1,20 +1,32 @@
 {
-    "login":{
-        "title": "Authorization",
-        "username": "username",
-        "password": "password",
-        "required": "required",
-        "loginFailed": "Login Failed",
-        "btn": "Sign in"
+    "page":{
+        "login":{
+            "title": "Authorization",
+            "username": "username",
+            "password": "password",
+            "required": "required",
+            "loginFailed": "Login Failed",
+            "btn": "Sign in"
+        },
+        "homePage": {
+            "title": "My favorite cinema",
+            "greetings": "hello",
+            "logOut": "Log out",
+            "addMovie": "Add",
+            "list": "list",
+            "block": "block",
+            "add": "Add to viewed"
+        },
+        "searchMovies": {
+            "title": "Choose your film",
+            "popularity": "Popularity",
+            "release":"Release",
+            "list": "Letter",
+            "block": "Block",
+            "add": "Add to favorites"
+          }
     },
-    "homePage": {
-        "title": "My favorite cinema",
-        "inquiry": "en-US",
-        "greetings": "hello",
-        "logOut": "Log out",
-        "add": "Add",
-        "list": "list",
-        "block": "block",
-        "addViewed": "Add to viewed"
-    }
+    "common":{
+        "inquiry": "en-US"
+      }
   }

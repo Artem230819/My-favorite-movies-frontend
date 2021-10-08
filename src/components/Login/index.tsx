@@ -3,7 +3,7 @@ import { LoginForm } from "./components/LoginForm";
 import { useTranslation } from "react-i18next";
 import { WrapperAuth } from "./css";
 import React from "react";
-import { LocalizationSelect } from "common/LocalizationSelect";
+import { LocalizationSelect } from "common/components/LocalizationSelect";
 
 export const Login = () => {
   const { t } = useTranslation();
@@ -19,7 +19,7 @@ export const Login = () => {
                 sx={{ fontSize: 50 }}
               ></AccountCircleIcon>
             </div>
-            <h2>{t("login.title")}</h2>
+            <h2>{t("page.login.title")}</h2>
           </div>
           <LoginForm />
         </div>
